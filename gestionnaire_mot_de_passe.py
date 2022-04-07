@@ -1,3 +1,5 @@
+# Le menu de l'application PassWD
+
 from generateur_mdpf import gen_mdpf
 from passwd_manager import pwd
 
