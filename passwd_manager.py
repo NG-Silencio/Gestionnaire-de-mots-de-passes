@@ -18,7 +18,7 @@ def pwd ():
 
     write_key()
 
-# Cette fonction permet de charger la clé depuis le fichier key.key en read-only
+# Cette fonction permet de charger la clé depuis le fichier key.key
 
     def load_key():
         file = open("key.key", "rb")
@@ -52,12 +52,11 @@ def pwd ():
         with open('passwords.txt', 'a') as f:
             f.write(name + "|" + fer.encrypt(pwd.encode()).decode() + "\n")
 
-# On ajoute une boucle "while True" puis on demande le choix de l'utilisateur soit consulter ou ajouter
-# On a un menu de choix pour l'utilisateur, pour avoir un interface facile et accessible
+# On ajoute une boucle "while True" puis on demande le choix de l'utilisateur soit consulter, ajouter ou quitter
 
     while True:
         mode = input(
-            "Bonjour, Voulez-vous ajouter un nouveau mot de passe ou consulter la liste (consulter, ajouter),appuyez q pour quitter ? : ").lower()
+            "Bonjour, Voulez-vous ajouter un nouveau mot de passe, consulter la liste ou quitter le programme (consulter, ajouter ou q) ? : ").lower()
 
         if mode == "q":
             break
