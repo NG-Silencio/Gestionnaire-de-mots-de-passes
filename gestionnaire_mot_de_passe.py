@@ -1,4 +1,4 @@
-# Le menu de l'application PassWD
+#La base de l'application PassWD avec un menu avec choix pour faciliter l'utilisation.
 
 from generateur_mdpf import gen_mdpf
 from passwd_manager import pwd
@@ -28,7 +28,7 @@ def menu():
       quit()
          
    else :
-      print (" Veuillez réssayer ! Choississez un numéro entre 1 et 3")
+      print (" Veuillez réssayer ! Choississez une option entre 1 et 3")
       menu()
 
 main()
