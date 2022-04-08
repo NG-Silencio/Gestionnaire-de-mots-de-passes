@@ -1,6 +1,8 @@
 # Gestionnaire-de-mots-de-passes
 Cette application permet d'encrypter, de stocker et de consulter les mots de passes ajoutés
 
+Il est conseillé d'ouvrir les 3 fichiers de l'application en tant que dossier pour la création des fichiers **key.key** et **Passwords.txt** ainsi ils seront créés directement dans le dossier. Sinon, ils seront créés dans le dossier de l'utilisateur.
+
 L'exécution de ce code nécessite le module "cryptography". Pour vérifier que pip est bien installé, on tape **pip -V** en ligne de commande. Si la commande n'est pas reconnu, c'est que l'utilitaire pip n'est pas installé. Pour installer le module "cryptography", on tape la commande **pip install cryptography** sur une fenêtre de ligne de commande (terminal,cmd) ou directement sur le terminal de notre logiciel interpreteur par exemple VS Code.
 
 Il est possible que la commande **pip install cryptography** ne fonctionne pas. Dans ce cas, il est possible que notre dossier python ou python/scripts ne se soit pas automatiquement ajoutés au **PATH** lors de l'installation de python. Alors on peut manuellement ajouter le dossier Python et Python\Scripts au **PATH**.
