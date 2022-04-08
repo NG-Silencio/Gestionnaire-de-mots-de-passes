@@ -46,11 +46,11 @@ def pwd ():
 # L'argument 'a' signifie append, il sert à ajouter de nouvelles lignes à la fin du fichier.
 
     def ajouter():
-        name = input("Nom du compte : ")
+        nom = input("Nom du compte : ")
         pwd = input("Mot de passe : ")
 
         with open('passwords.txt', 'a') as f:
-            f.write(name + "|" + fer.encrypt(pwd.encode()).decode() + "\n")
+            f.write(nom + "|" + fer.encrypt(pwd.encode()).decode() + "\n")
 
 # Un menu simple et accessible pour l'utilisateur.
 # On ajoute des boucles "if" pour les différents choix des utilisateurs.
@@ -59,18 +59,18 @@ def pwd ():
     while True:
         print ("\n", "***** Bienvenue dans le gestionnaire de mots de passes *****")
         mode = input("""
-                      1: Consulter
-                      2: Ajouter
+                      1: Ajouter
+                      2: Consulter
                       3: Quitter
 
                       Merci de choisir une option : """).lower()
 
         if mode == "3" or mode == "quitter":
             break
-        if mode == "1" or mode == "consulter":
-            consulter()
-        elif mode == "2" or mode == "ajouter":
+        if mode == "1" or mode == "ajouter":
             ajouter()
+        elif mode == "2" or mode == "consulter":
+            consulter()
         else:
             print("Invalide. Choisissez entre les options 1 à 3")
             continue
