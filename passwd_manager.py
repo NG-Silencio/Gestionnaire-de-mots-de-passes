@@ -9,15 +9,14 @@ from cryptography.fernet import Fernet
 def pwd ():
 
 # Cette fonction est faite pour créer la clé de cryptage (On l'utilise juste une fois  pour créer la clé
-# puis on commente l'expression (ligne 13 à 18))
+# puis on la commente (ligne 14 à 19))
 
-    '''
     def write_key():
         key = Fernet.generate_key()
         with open("key.key", "wb") as key_file:
             key_file.write(key)
 
-    write_key() '''
+    write_key()
 
 # Cette fonction permet de charger la clé depuis le fichier key.key en read-only
 
