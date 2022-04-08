@@ -8,18 +8,17 @@ from cryptography.fernet import Fernet
 # On définit une fonction pour le programme à suivre
 def pwd ():
 
-# Cette fonction est faite pour créer la clé de cryptage (On l'utilise juste une fois  pour créer la clé
-# puis on commente l'expression (ligne 13 à 18)). "wb" signifie écrire en binaire
+# Cette fonction est faite pour créer la clé de cryptage. Elle génere le fichier "key.key" afin de contenir la clé.
+# Cette fonction est executé une seule fois afin de génerer la clé puis on la commente (ligne 14 à 19).
 
-    '''
     def write_key():
         key = Fernet.generate_key()
         with open("key.key", "wb") as key_file:
             key_file.write(key)
 
-    write_key() '''
+    write_key()
 
-# Cette fonction permet de charger la clé depuis le fichier key.key.
+# Cette fonction permet de charger la clé précedemment créé depuis le fichier "key.key".
 
     def load_key():
         file = open("key.key", "rb")
@@ -31,9 +30,9 @@ def pwd ():
     key = load_key()
     fer = Fernet(key)
 
-# Cette fonction permet de consulter les mots de passes enregistrés dans notre gestionnaire
-# De base, les mots de passes sont encryptés mais en les consultant
-# On peut utiliser les méthodes decrypt et decode pour décrypter la clé et transmettre le mot de passe
+# Cette fonction permet de consulter les mots de passes enregistrés dans le fichier "passwords.txt" qui servira de gestionnaire d'identifiants et de mots de passes
+# Les mots de passes ajoutés à notre gestionnaire sont encryptés alors pour les consulter il faudra les décrypter.
+# On peut utiliser les méthodes decrypt et decode pour décrypter la clé et transmettre le mot de passe.
 
     def consulter():
         with open('passwords.txt', 'r') as f:
@@ -44,7 +43,7 @@ def pwd ():
 
 # Cette fonction permet d'ajouter un mot de passe au gestionnaire.
 # Cette fois, au lieu d'utiliser la méthode read, on utilise la méthode write puisqu'on veut ajouter des entrées au fichier "passwords.txt" qui sert de stockage.
-# L'argument 'a' signifie append, il sert à ajouter les nouvelles lignes à la fin du fichier.
+# L'argument 'a' signifie append, il sert à ajouter de nouvelles lignes à la fin du fichier.
 
     def ajouter():
         name = input("Nom du compte : ")
